@@ -1,0 +1,141 @@
+@import 'var';
+@import 'reset';
+@import 'mixin';
+
+.container
+{
+    @include flex;
+    @include res
+    {
+        padding: 0 20px;
+    }
+}
+
+header
+{
+    text-transform: uppercase;
+}
+.banner
+{
+    background: #f7f7f7;
+    .brand
+    {
+        font-size: 2rem;
+        font-weight: $bold;
+        font-family: $font;
+        span{
+            color: $orange;
+        }
+    }
+    nav{
+        span
+        {
+            display: none;
+            font-weight: $med;
+            font-size: 1.2rem;
+            @include res
+            {
+                display: block;
+            }
+        }
+        ul{
+            @include res
+            {
+                display: none;
+            }
+            li{
+                display: inline-block;
+                a{
+                    color: #000;
+                    padding: 1.6rem;
+                    display: block;
+                    font-size: 1rem;
+                    font-weight: $med;
+                    font-family: $font1;
+                    &:hover
+                    {
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+    &_content
+    {
+        @include flex;
+        padding: 5rem 0;
+        &_left
+        {
+            flex-basis: 50%;
+            @include res
+            {
+                flex-basis: 100%;
+            }
+        }
+        &_right
+        {
+            position: relative;
+            right: -104px;
+            top: 0px;
+            flex-basis: 50%;
+            @include res
+            {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+.subtaitle
+{
+    font-size: 1.2rem;
+    font-weight: $med;
+    color: $orange;
+}
+.maintaitle
+{
+    font-size: 3.75rem;
+    font-family: $font;
+    color: $brand;
+    line-height: 1.2;
+    padding: 20px 0 ;
+}
+.btn
+{
+    background: $orange;
+    color: #fff;
+    padding: 1.6rem 2.8rem;
+    border: none;
+    border-radius: 35px;
+}
+// Banner ending
+
+// About starting
+.about
+{
+    &_left
+    {
+        flex-basis: 50%;
+        position: relative;
+        left: 0;
+        top: 5rem;
+        .img1
+        {
+            position: absolute;
+            width: 458px;
+            top: 14rem;
+        }
+        .img2
+        {
+            width: 360px;
+            left: 33rem;
+            top: 2rem;
+            position: absolute;
+        }
+    }
+    &_right
+    {
+        flex-basis: 50%;
+    }
+}
+// About ending
